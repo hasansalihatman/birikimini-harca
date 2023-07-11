@@ -147,8 +147,8 @@ export default function App() {
 
   return (
     <div>
-      <Navbar style={{ padding: "12px" , position: "fixed", top:"0",  width: "100%", zIndex:"9999"}}>
-        <NavbarBrand style={{ fontWeight: "500", letterSpacing: "0.2px", backgroundColor:""}} href="/">Birikimini Harca</NavbarBrand>
+      <Navbar style={{ padding: "12px" , position: "fixed", top:"0",  width: "100%", zIndex:"9999", backgroundColor:'#fff'}}>
+        <NavbarBrand style={{ fontWeight: "500", letterSpacing: "0.2px", }} href="/">Birikimini Harca</NavbarBrand>
         {
           stage === 2 && <Button onClick={() => setStage(3)} disabled={totalSpendings > 0 ? false : true} color="primary">
             Harcama Özeti
@@ -163,7 +163,7 @@ export default function App() {
       {
         stage === 1
           ? <Container>
-            <Card style={{ padding: "24px", margin: "12px" }}>
+            <Card style={{ padding: "24px", margin: "12px", marginTop: '64px'}}>
               <Form>
                 <FormGroup>
                   <Label for="savings">
@@ -200,7 +200,7 @@ export default function App() {
           : stage === 2
             ? <>
               <Container >
-                <Card style={{ padding: "24px", margin: "12px"}}>
+                <Card style={{ padding: "24px", margin: "12px", marginTop: '64px'}}>
                   <Row >
                     <Col style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
                       <CardTitle style={{ color: "#6c757d" }} tag={'h5'}>Birikim</CardTitle>
@@ -235,10 +235,10 @@ export default function App() {
               </Container>
             </>
             : <Container>
-              <Card style={{ padding: "24px", margin: "12px" }}>
+              <Card style={{ padding: "24px", margin: "12px" , marginTop: '64px'}}>
                 <Row>
                   <Table striped>
-                    <thead>
+                    <thead >
                       <tr>
                         <th>
                           #
