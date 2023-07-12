@@ -12,6 +12,8 @@ export default function CardItem({ data, addToCart, removeToCart, left, cart }) 
 
   const [amount, setAmount] = useState(0)
 
+
+
   useEffect(() => {
     const copyOfCart = [...cart]
     const summary = []
@@ -74,6 +76,7 @@ export default function CardItem({ data, addToCart, removeToCart, left, cart }) 
   }
 
   return (
+
     <Card
       style={{
         width: '400px',
